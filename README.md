@@ -12,6 +12,8 @@ Run tests/coverage with `make test`
 
 ### Docker
 
+See https://www.docker.com/get-started for installation instructions.
+
 Run `make docker` to build the image, then use `docker run -t bpifsa` to run the container
 
 Run `make docker-test` to run the tests inside a Docker container.
