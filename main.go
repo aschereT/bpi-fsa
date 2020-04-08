@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"strings"
 )
 
@@ -69,5 +70,19 @@ func fsa(inputString string) (string, error) {
 }
 
 func main() {
-	fmt.Println(fsa("110"))
+	inputs := os.Args[1:]
+
+	if len(inputs) == 0 {
+		fmt.Println("Usage: bpi-fsa input1 input2 ...")
+		fmt.Println("Example: bpi-fsa 110 1010")
+	}
+
+	for _, input := range inputs {
+		output, err := fsa(input)
+		if err != nil {
+			fmt.Println(input, ":", output, "#", err)
+		} else {
+			fmt.Println(input, ":", output)
+		}
+	}
 }
