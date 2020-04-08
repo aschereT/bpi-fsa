@@ -1,3 +1,5 @@
+![Go](https://github.com/aschereT/bpi-fsa/workflows/Go/badge.svg)
+
 # bpi-fsa
 
 ## Running
